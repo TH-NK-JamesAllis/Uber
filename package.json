@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "version": "0.0.1",
+  "description": "Uber app",
+  "main": "",
+  "scripts": {},
+  "repository": "",
+  "keywords": [],
+  "author": "James Allis",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-requirejs": "^1.0.0-rc2"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-uber": "^1.0.0"
+  }
+}

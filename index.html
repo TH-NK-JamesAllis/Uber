@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Uber</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+
+    <script>
+
+      var map,directionsService,directionsDisplay;;
+
+      window.initMap = function(){
+        directionsService = new google.maps.DirectionsService;
+        directionsDisplay = new google.maps.DirectionsRenderer;
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 7
+        });
+     }
+      </script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="/main.js"></script>
+      
+  </head>
+  <body>
+      
+      <div class="form">
+
+        <p class="home-address">Home address: <span></span></p>
+
+        <div class="input">
+          <input type="text" id="source" placeholder="Current Location" value="5 Greenfield Rd, Newcastle upon Tyne, NE3 5TN"/>
+        </div>
+        <div class="input">
+          <input type="text" id="destination" placeholder="Destination" value="82 Pilgrim St, Newcastle upon Tyne, NE1"/>
+        </div>
+        <div class="button">
+          <a href="#">Submit</a>
+        </div>
+
+
+        <div class="result">
+          <p>Duration is: <span class="duration">??</span> minutes via Uber</p>
+          <p>Eta is: <span class="eta">??</span> minutes</p>
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="history-wrapper">
+        <h2>History:</h2>
+        <div class="history"></div>
+      </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZo3pLJPyJrAsbrpsrBX2C28tBvwhDafs&callback=initMap"></script>
+
+  </body>
+</html>
